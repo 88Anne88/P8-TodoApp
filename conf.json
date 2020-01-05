@@ -1,0 +1,36 @@
+{
+    "source": {
+        "includePattern": ".+\\.js(doc|x)?$",   // Only process file ending in .js, .jsdoc or .jsx
+        "include": ["./js","./node_modules/jsdoc/lib","package.json"], // Check folders mentioned,add README.md,
+        "exclude": ["node_modules"]             // exclude node_modules.
+    },
+    "recurseDepth": 10,                         // Only go 10 levels deep.
+    "opts": {
+        "destination": "./docs/",               // Where I want my docs to be generated.
+        "recurse": true,                         // Same as using -r or --recurse
+        "encoding": "utf8",
+        "private": true,
+        "template": "./node_modules/jsdoc/templates/jsdoc-template"
+    },
+    "tags": {
+        "allowUnknownTags": true,
+        "dictionaries": ["jsdoc"]
+    },
+    "plugins": [
+        "plugins/markdown"
+
+    ],
+    "templates": {
+        "referenceTitle": "My todoApp",
+        "disableSort": false,
+        "collapse": true,
+        "resources": {
+            "google": "https://www.google.com/"
+        }
+    }
+
+}
+
+
+
+
